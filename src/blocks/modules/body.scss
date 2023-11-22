@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  font-size: rem(16);
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: $font-main;
+  font-weight: 400;
+  overflow-x: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-text-dark;
+    width: 6px;
+    border-radius: rem(10);
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 6px;
+    background-color: $color-gray;
+  }
+
+  @include r(767) {
+    font-size: rem(14);
+  }
+}

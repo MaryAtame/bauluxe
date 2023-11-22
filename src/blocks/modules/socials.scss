@@ -1,0 +1,18 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: rem(9);
+
+  &__link {
+    color: $color-text-dark;
+    font-weight: 700;
+  }
+  &__link--text {
+    margin-right: rem(15);
+  }
+
+  &__icon {
+    max-width: rem(33);
+    max-height: rem(34);
+  }
+}

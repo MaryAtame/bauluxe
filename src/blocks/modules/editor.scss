@@ -1,0 +1,19 @@
+.editor {
+
+  p {
+    color: $color-text;
+    line-height: 1.6;
+  }
+  p+p {
+    margin-top: rem(20);
+  }
+  b {
+    font-weight: 700;
+  }
+  &--18 {
+    font-size: rem(18);
+    @include r($tablet) {
+      font-size: rem(16);
+    }
+  }
+}

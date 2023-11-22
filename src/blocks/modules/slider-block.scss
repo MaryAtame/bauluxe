@@ -1,0 +1,14 @@
+.slider-block {
+  display: flex;
+  position: relative;
+  margin-bottom: rem(60);
+  @include r(1200) {
+    flex-direction: column;
+    .slider {
+      order: 1;
+    }
+  }
+  @include r($mobile) {
+    margin-bottom: rem(40);
+  }
+}

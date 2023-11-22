@@ -1,0 +1,293 @@
+*[hidden] {
+  display: none;
+}
+
+*[disabled] {
+  opacity: .6;
+  pointer-events: none;
+}
+
+input {
+  flex-shrink: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+svg,
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+svg {
+  flex-shrink: 0;
+}
+
+picture,
+img {
+  display: block;
+}
+
+picture {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+img {
+  max-width: none;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+li {
+  //margin-bottom: rem(5);
+}
+
+.z-index {
+  &-1 {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-3 {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.only-mobile {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  display: none;
+  @include r($mobile) {
+    position: relative;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
+  }
+}
+
+.mob-hidden {
+  @include r($mobile) {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.tab-hidden {
+  @include r($tablet) {
+    position: absolute;
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.tab-visible {
+  display: none;
+  visibility: hidden;
+  @include r($tablet) {
+    display: flex;
+    visibility: visible;
+  }
+}
+
+.laptop-hidden {
+  @include r($laptop) {
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.laptop-visible {
+  position: absolute;
+  pointer-events: none;
+  display: none;
+  visibility: hidden;
+  @include r($laptop) {
+    position: relative;
+    pointer-events: auto;
+    display: flex;
+    visibility: visible;
+  }
+}
+
+.desktop-hidden {
+  @include rmin($laptop) {
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+.order-m {
+  &--1 {
+    @include r($mobile) {
+      order: -1;
+    }
+  }
+
+  &-1 {
+    @include r($mobile) {
+      order: 1;
+    }
+  }
+
+  &-2 {
+    @include r($mobile) {
+      order: 2;
+    }
+  }
+
+  &-3 {
+    @include r($mobile) {
+      order: 3;
+    }
+  }
+
+  &-4 {
+    @include r($mobile) {
+      order: 4;
+    }
+  }
+
+  &-5 {
+    @include r($mobile) {
+      order: 5;
+    }
+  }
+
+  &-6 {
+    @include r($mobile) {
+      order: 6;
+    }
+  }
+
+  &-7 {
+    @include r($mobile) {
+      order: 7;
+    }
+  }
+
+  &-8 {
+    @include r($mobile) {
+      order: 8;
+    }
+  }
+
+  &-9 {
+    @include r($mobile) {
+      order: 9;
+    }
+  }
+}
+
+.order-laptop {
+  &--1 {
+    @include r($laptop) {
+      order: 1;
+    }
+  }
+
+  &--2 {
+    @include r($laptop) {
+      order: 2;
+    }
+  }
+
+  &--3 {
+    @include r($laptop) {
+      order: 3;
+    }
+  }
+}
+
+.order-tab {
+  &--1 {
+    @include r($tablet) {
+      order: 1;
+    }
+  }
+
+  &--2 {
+    @include r($tablet) {
+      order: 2;
+    }
+  }
+
+  &--3 {
+    @include r($tablet) {
+      order: 3;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--tab-column {
+    @include r(1200) {
+      flex-direction: column;
+    }
+  }
+
+  &--mob-column {
+    @include r($mobile) {
+      flex-direction: column;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-mob {
+  @include r($mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.marg-left {
+  margin-left: auto;
+}

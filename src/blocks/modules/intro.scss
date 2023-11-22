@@ -1,0 +1,79 @@
+.intro {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: rem(736);
+  border-radius: rem(20) rem(20) rem(20) rem(30);
+  overflow: hidden;
+  @include r($tablet) {
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(239, 239, 239, 0.00) 42.13%, #EFEFEF 92.42%);
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__caption {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    bottom: -1px;
+    left: rem(33);
+    width: rem(940);
+    height: rem(252);
+    background: url("../assets/images/intro-underlay.svg") center center / 100% no-repeat;
+    @include r($tablet) {
+      width: 100%;
+      left: 0;
+      background: none;
+    }
+  }
+
+  &__caption-content {
+    width: 100%;
+    max-width: calc(100% - 115px);
+    height: 100%;
+    margin: 0 auto;
+    padding: rem(36) rem(50) rem(30);
+    color: $color-text-dark;
+    @include r($tablet) {
+      margin: 0;
+      padding: rem(20) rem(20) rem(20) rem(30);
+    }
+    @include r($mobile) {
+      max-width: none;
+      width: 85%;
+      padding: rem(17);
+    }
+  }
+
+  &__title {
+    font-size: calc(29px + 15 * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: rem(13);
+  }
+
+  &__subtitle {
+    font-size: rem(20);
+    font-weight: 600;
+    @include r($tablet){
+      font-size: rem(16);
+    }
+  }
+}

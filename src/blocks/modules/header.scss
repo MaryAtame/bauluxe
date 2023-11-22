@@ -1,0 +1,28 @@
+.header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #FFFFFF;
+  padding: rem(25) 0;
+  border-radius: 0 0 rem(30) rem(30);
+  @include r($mobile) {
+    border-radius: 0 0 rem(16) rem(16);
+    padding: rem(13) 0 rem(11);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__socials {
+    @include r(1300) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}

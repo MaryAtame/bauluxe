@@ -1,0 +1,10 @@
+.main {
+  margin-top: rem(98);
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: rem(282);
+  @include r($tablet) {
+    margin-top: 0;
+    padding-bottom: rem(127);
+  }
+}

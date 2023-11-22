@@ -1,0 +1,34 @@
+@use "sass:math";
+
+@function rem($pixels) {
+  @return calc(($pixels/16) * 1rem);
+}
+
+// width
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content
+  }
+}
+
+// line-clamp
+@mixin line-clamp($lines:1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// text underline
+@mixin text-underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

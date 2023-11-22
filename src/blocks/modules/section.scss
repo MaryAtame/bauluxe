@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+
+  &__anchor {
+    position: absolute;
+    top: rem(-200);
+  }
+
+  &__side-mark {
+    position: relative;
+    transform: translateX(-150px);
+
+    &:before {
+      content: attr(data-title);
+      position: absolute;
+      top: 0;
+      left: 0;
+      writing-mode: vertical-rl;
+      transform: scale(-1);
+      white-space: nowrap;
+      font-size: rem(82);
+      font-weight: 900;
+      line-height: 1;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      z-index: 0;
+      @include r($laptop-min) {
+        content: none;
+      }
+    }
+  }
+
+  &__side-mark--bottom {
+    &:before {
+      top: rem(-305);
+    }
+  }
+
+  &__side-mark--dark {
+    &:before {
+      color: #F6F6F6;
+    }
+  }
+}

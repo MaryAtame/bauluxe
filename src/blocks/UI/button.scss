@@ -1,0 +1,15 @@
+.button {
+  cursor: pointer;
+  display: flex;
+@include r(767) {
+  width: rem(200);
+}
+  &:hover {
+
+  }
+
+  svg {
+
+  }
+
+}

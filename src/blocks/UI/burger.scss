@@ -1,0 +1,41 @@
+.burger {
+  display: none;
+  visibility: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: rem(30);
+  height: rem(30);
+
+  @include r($tablet) {
+    display: flex;
+    visibility: visible;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 2px);
+      width: rem(15);
+    }
+
+    span:nth-child(2) {
+      width: 0;
+      height: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -3px);
+      width: rem(15);
+    }
+  }
+
+  span {
+    display: block;
+    width: rem(16);
+    height: rem(3);
+    background-color: $color-text-dark;
+    border-radius: 7px;
+    transition: all .3s ease-in-out;
+  }
+}
