@@ -552,6 +552,9 @@ meter {
   color: #000000;
   white-space: nowrap;
 }
+.nav__link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 @media only screen and (max-width: 1023.9px) {
   .nav--header {
     position: absolute;
@@ -1061,6 +1064,9 @@ meter {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.slider__button:hover {
+  opacity: 0.2;
+}
 .slider__button svg {
   max-width: 3.5rem;
   max-height: 0.75rem;
@@ -1134,6 +1140,10 @@ meter {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
+}
+.slider__button-basic:hover {
+  -webkit-box-shadow: 7px 7px 15px 0 rgba(0, 0, 0, 0.13);
+          box-shadow: 7px 7px 15px 0 rgba(0, 0, 0, 0.13);
 }
 @media only screen and (max-width: 1550px) {
   .slider__button-basic {

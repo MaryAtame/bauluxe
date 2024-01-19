@@ -59,6 +59,10 @@
     border: 1px solid $color-text-dark;
     transition: all .3s ease-in-out;
 
+    &:hover {
+      opacity: .2;
+    }
+
     svg {
       max-width: rem(56);
       max-height: rem(12);
@@ -119,6 +123,11 @@
     width: rem(100);
     height: rem(100);
     border-radius: 50%;
+
+    &:hover {
+      box-shadow: 7px 7px 15px 0 rgba(0, 0, 0, 0.13);
+    }
+
     @include r(1550) {
       width: rem(70);
       height: rem(70);

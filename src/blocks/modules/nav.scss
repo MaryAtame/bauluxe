@@ -24,6 +24,9 @@
     font-size: rem(16);
     color: #000000;
     white-space: nowrap;
+    &:hover {
+      background-color: rgba(#000000, 5%);
+    }
   }
 
   &--header {
